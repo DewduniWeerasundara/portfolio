@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>W.D.M.D. Weerasundara – CV</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --green: #1a6b45;
+    --green-light: #2e8b57;
+    --green-pale: #e8f5ee;
+    --green-mid: #c5e8d4;
+    --dark: #141414;
+    --mid: #3a3a3a;
+    --muted: #7a7a7a;
+    --white: #ffffff;
+    --off: #f9faf8;
+    --border: #d4e8db;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--off);
+    color: var(--dark);
+    line-height: 1.65;
+  }
+
+  /* ── LAYOUT ── */
+  .page {
+    max-width: 960px;
+    margin: 40px auto;
+    background: var(--white);
+    box-shadow: 0 8px 48px rgba(0,0,0,0.10);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    background: var(--green);
+    color: var(--white);
+    padding: 52px 60px 44px;
+    position: relative;
+    overflow: hidden;
+  }
+  .header::before {
+    content: '';
+    position: absolute;
+    right: -80px; top: -80px;
+    width: 320px; height: 320px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.06);
+  }
+  .header::after {
+    content: '';
+    position: absolute;
+    right: 60px; bottom: -100px;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.04);
+  }
+  .header-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.9rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+    position: relative;
+  }
+  .header-title {
+    margin-top: 8px;
+    font-size: 0.95rem;
+    font-weight: 300;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    opacity: 0.82;
+    position: relative;
+  }
+  .header-contacts {
+    margin-top: 22px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 28px;
+    font-size: 0.85rem;
+    opacity: 0.92;
+    position: relative;
+  }
+  .header-contacts a { color: var(--white); text-decoration: none; }
+  .header-contacts a:hover { text-decoration: underline; }
+  .contact-item { display: flex; align-items: center; gap: 7px; }
+  .contact-icon { font-size: 1rem; }
+
+  /* ── BODY ── */
+  .body {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 0;
+  }
+
+  /* ── MAIN ── */
+  .main { padding: 48px 50px; border-right: 1px solid var(--border); }
+
+  /* ── SIDEBAR ── */
+  .sidebar { padding: 48px 36px; background: var(--off); }
+
+  /* ── SECTION ── */
+  .section { margin-bottom: 42px; }
+  .section:last-child { margin-bottom: 0; }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--green);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--green-mid);
+    margin-bottom: 22px;
+  }
+
+  /* ── OBJECTIVE ── */
+  .objective p {
+    font-size: 0.92rem;
+    color: var(--mid);
+    font-weight: 300;
+  }
+
+  /* ── PROJECT ── */
+  .project { margin-bottom: 28px; }
+  .project:last-child { margin-bottom: 0; }
+  .project-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+  .project-name {
+    font-weight: 600;
+    font-size: 0.97rem;
+    color: var(--dark);
+  }
+  .project-tag {
+    font-size: 0.72rem;
+    background: var(--green-pale);
+    color: var(--green);
+    border: 1px solid var(--green-mid);
+    padding: 2px 10px;
+    border-radius: 20px;
+    white-space: nowrap;
+    font-weight: 500;
+    margin-top: 2px;
+  }
+  .project ul {
+    margin-top: 8px;
+    padding-left: 18px;
+    font-size: 0.875rem;
+    color: var(--mid);
+  }
+  .project li { margin-bottom: 4px; }
+  .project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 7px;
+    font-size: 0.78rem;
+    color: var(--green-light);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .project-link:hover { text-decoration: underline; }
+
+  /* ── SIDEBAR SECTIONS ── */
+  .sidebar .section-title { font-size: 0.95rem; }
+
+  /* ── SKILLS ── */
+  .skill-group { margin-bottom: 14px; }
+  .skill-group-name {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--muted);
+    margin-bottom: 7px;
+  }
+  .skill-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .chip {
+    font-size: 0.78rem;
+    background: var(--white);
+    border: 1px solid var(--border);
+    color: var(--mid);
+    padding: 3px 11px;
+    border-radius: 20px;
+    font-weight: 400;
+  }
+  .chip.accent {
+    background: var(--green-pale);
+    border-color: var(--green-mid);
+    color: var(--green);
+    font-weight: 500;
+  }
+
+  /* ── EDUCATION ── */
+  .edu-item { margin-bottom: 18px; }
+  .edu-item:last-child { margin-bottom: 0; }
+  .edu-degree { font-weight: 600; font-size: 0.88rem; color: var(--dark); }
+  .edu-school { font-size: 0.82rem; color: var(--green-light); font-weight: 500; margin-top: 2px; }
+  .edu-date { font-size: 0.77rem; color: var(--muted); margin-top: 2px; }
+
+  /* ── CERTIFICATE ── */
+  .cert-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+    position: relative;
+    overflow: hidden;
+  }
+  .cert-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--green);
+  }
+  .cert-logo {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+  }
+  .cert-name {
+    font-weight: 600;
+    font-size: 0.88rem;
+    color: var(--dark);
+    line-height: 1.3;
+  }
+  .cert-issuer {
+    font-size: 0.78rem;
+    color: var(--green-light);
+    font-weight: 500;
+    margin-top: 4px;
+  }
+  .cert-date {
+    font-size: 0.75rem;
+    color: var(--muted);
+    margin-top: 3px;
+  }
+  .cert-id {
+    font-size: 0.70rem;
+    color: var(--muted);
+    margin-top: 8px;
+    font-family: monospace;
+    background: var(--off);
+    padding: 3px 7px;
+    border-radius: 4px;
+    display: inline-block;
+  }
+
+  /* ── SOFT SKILLS ── */
+  .soft-skill {
+    font-size: 0.82rem;
+    color: var(--mid);
+    padding: 5px 0;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .soft-skill:last-child { border-bottom: none; }
+  .soft-dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: var(--green);
+    flex-shrink: 0;
+  }
+
+  /* ── EXTRACURRICULAR ── */
+  .extra-item {
+    font-size: 0.82rem;
+    color: var(--mid);
+    padding: 4px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .extra-item::before {
+    content: '▸';
+    color: var(--green);
+    flex-shrink: 0;
+    font-size: 0.75rem;
+    margin-top: 2px;
+  }
+
+  /* ── REFERENCES ── */
+  .ref-item { margin-bottom: 16px; font-size: 0.82rem; }
+  .ref-item:last-child { margin-bottom: 0; }
+  .ref-name { font-weight: 600; color: var(--dark); font-size: 0.87rem; }
+  .ref-role { color: var(--muted); font-size: 0.78rem; margin-top: 2px; }
+  .ref-contact { color: var(--green-light); font-size: 0.78rem; margin-top: 2px; }
+
+  @media (max-width: 720px) {
+    .page { margin: 0; border-radius: 0; }
+    .body { grid-template-columns: 1fr; }
+    .main { padding: 32px 28px; border-right: none; border-bottom: 1px solid var(--border); }
+    .sidebar { padding: 32px 28px; }
+    .header { padding: 36px 28px 32px; }
+    .header-name { font-size: 2rem; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-name">W. D. M. D. Weerasundara</div>
+    <div class="header-title">Information Technology Undergraduate</div>
+    <div class="header-contacts">
+      <span class="contact-item"><span class="contact-icon">📍</span>71/49A Hansagiri Road, Swarna Hansa Place, Gampaha</span>
+      <span class="contact-item"><span class="contact-icon">📞</span>077-6335536</span>
+      <span class="contact-item"><span class="contact-icon">✉️</span><a href="mailto:dewduniweerasundara7@gmail.com">dewduniweerasundara7@gmail.com</a></span>
+      <span class="contact-item"><span class="contact-icon">🔗</span><a href="https://www.linkedin.com/in/dewduni-weerasundara-a8a799385/" target="_blank">LinkedIn</a></span>
+      <span class="contact-item"><span class="contact-icon">🌐</span><a href="https://dewduni-weerasundara.vercel.app" target="_blank">dewduni-weerasundara.vercel.app</a></span>
+    </div>
+  </div>
+
+  <div class="body">
+
+    <!-- MAIN COLUMN -->
+    <div class="main">
+
+      <!-- OBJECTIVE -->
+      <div class="section objective">
+        <div class="section-title">Objective</div>
+        <p>Third-year Information Technology undergraduate with hands-on experience in MERN stack development, Kotlin mobile application development, database management, and web technologies. Skilled in React.js, Node.js, MongoDB, JavaScript, PHP, MySQL, and GitHub. Seeking an IT internship to apply software development, problem-solving, and teamwork skills in real-world projects.</p>
+      </div>
+
+      <!-- PROJECTS -->
+      <div class="section">
+        <div class="section-title">University Projects</div>
+
+        <div class="project">
+          <div class="project-header">
+            <div class="project-name">Hospital Management System</div>
+            <div class="project-tag">MERN Stack · Group</div>
+          </div>
+          <ul>
+            <li>Developed a full hospital management system using MongoDB, Express.js, React.js, and Node.js.</li>
+            <li>Implemented role-based access control, appointment management, medical records, lab reports, and PDF reporting.</li>
+            <li>Added features such as AI chatbot, BMI calculator, and lab report insights.</li>
+          </ul>
+          <a class="project-link" href="https://github.com/sanjuladilhara20020116/Hospital-Management-System" target="_blank">⤷ GitHub Repository</a>
+        </div>
+
+        <div class="project">
+          <div class="project-header">
+            <div class="project-name">Habit Flow Mobile Application</div>
+            <div class="project-tag">Kotlin · Individual</div>
+          </div>
+          <ul>
+            <li>Developed an Android self-care journal and habit tracking app using Kotlin, Java, XML, and Jetpack components.</li>
+            <li>Implemented daily habit tracking, mood journal, hydration reminders, statistics dashboard, home-screen widget, and dark mode.</li>
+            <li>Used Shared Preferences for local data storage with a user-friendly interface.</li>
+          </ul>
+          <a class="project-link" href="https://github.com/dewduni111/Habit-flow.git" target="_blank">⤷ GitHub Repository</a>
+        </div>
+
+        <div class="project">
+          <div class="project-header">
+            <div class="project-name">Smart Sport – Academic Management & Progress Tracking</div>
+            <div class="project-tag">MERN Stack · Group</div>
+          </div>
+          <ul>
+            <li>Developed the lecturer academic management module using MongoDB, Express.js, React.js, and Node.js.</li>
+            <li>Implemented module creation, lecture note uploading, viva/presentation scheduling, document download, and student marking.</li>
+            <li>Added schedule conflict detection and calculated individual/average student marks for progress tracking.</li>
+          </ul>
+          <a class="project-link" href="https://github.com/pasindu8/ITPM-Project/tree/dewduni-new" target="_blank">⤷ GitHub Repository</a>
+        </div>
+
+      </div>
+
+      <!-- EXTRACURRICULAR -->
+      <div class="section">
+        <div class="section-title">Extra-Curricular Activities</div>
+        <div class="extra-item">Member, Leo Club – Sri Lanka Institute of Information Technology</div>
+        <div class="extra-item">Member, Art Circle – Sri Lanka Institute of Information Technology</div>
+        <div class="extra-item">Member, School Cadet Team – Yasodara Devi Balika Vidyalaya, Gampaha</div>
+        <div class="extra-item">Participated in cricket, netball, athletics, and dancing during school.</div>
+      </div>
+
+      <!-- REFERENCES -->
+      <div class="section">
+        <div class="section-title">References</div>
+        <div class="ref-item">
+          <div class="ref-name">Mr. W.A.R.P. Settinayake</div>
+          <div class="ref-role">Senior Technical Lead, Intervest Software Technologies</div>
+          <div class="ref-contact">0716366156 · rakitha@intervest.lk</div>
+        </div>
+        <div class="ref-item">
+          <div class="ref-name">Dr. Ruvini Mathangadeera</div>
+          <div class="ref-role">Assistant Professor, Dept. of Applied Sciences, Faculty of Humanities &amp; Sciences, SLIIT</div>
+          <div class="ref-contact">0702823380 · ruvini.ma@sliit.lk</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+
+      <!-- TECHNICAL SKILLS -->
+      <div class="section">
+        <div class="section-title">Technical Skills</div>
+
+        <div class="skill-group">
+          <div class="skill-group-name">Programming</div>
+          <div class="skill-chips">
+            <span class="chip">C</span>
+            <span class="chip">C++</span>
+            <span class="chip accent">JavaScript</span>
+            <span class="chip">PHP</span>
+            <span class="chip">Kotlin</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-name">Frontend</div>
+          <div class="skill-chips">
+            <span class="chip">HTML</span>
+            <span class="chip">CSS</span>
+            <span class="chip accent">React.js</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-name">Backend</div>
+          <div class="skill-chips">
+            <span class="chip accent">Node.js</span>
+            <span class="chip">Express.js</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-name">Database</div>
+          <div class="skill-chips">
+            <span class="chip accent">MongoDB</span>
+            <span class="chip">MySQL</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-name">Tools & Mobile</div>
+          <div class="skill-chips">
+            <span class="chip">GitHub</span>
+            <span class="chip">VS Code</span>
+            <span class="chip">Android</span>
+            <span class="chip">XML</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CERTIFICATE -->
+      <div class="section">
+        <div class="section-title">Certifications</div>
+        <div class="cert-card">
+          <div class="cert-logo">🍃</div>
+          <div class="cert-name">MongoDB Atlas Administrator Path</div>
+          <div class="cert-issuer">MongoDB, Inc.</div>
+          <div class="cert-date">Completed: 05 January 2026</div>
+          <div class="cert-id">ID: MDBzqaji48fna</div>
+        </div>
+      </div>
+
+      <!-- SOFT SKILLS -->
+      <div class="section">
+        <div class="section-title">Soft Skills</div>
+        <div class="soft-skill"><div class="soft-dot"></div>Teamwork &amp; Collaboration</div>
+        <div class="soft-skill"><div class="soft-dot"></div>Communication</div>
+        <div class="soft-skill"><div class="soft-dot"></div>Problem Solving</div>
+        <div class="soft-skill"><div class="soft-dot"></div>Time Management</div>
+        <div class="soft-skill"><div class="soft-dot"></div>Decision Making</div>
+        <div class="soft-skill"><div class="soft-dot"></div>Risk Management</div>
+      </div>
+
+      <!-- EDUCATION -->
+      <div class="section">
+        <div class="section-title">Education</div>
+
+        <div class="edu-item">
+          <div class="edu-degree">BSc (Hons) in Information Technology</div>
+          <div class="edu-school">Sri Lanka Institute of Information Technology</div>
+          <div class="edu-date">Sep 2023 – Sep 2027 (Undergraduate)</div>
+        </div>
+
+        <div class="edu-item">
+          <div class="edu-degree">GCE Advanced Level</div>
+          <div class="edu-school">Passed – November 2023</div>
+        </div>
+
+        <div class="edu-item">
+          <div class="edu-degree">GCE Ordinary Level</div>
+          <div class="edu-school">Passed – December 2019</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</body>
+</html>
