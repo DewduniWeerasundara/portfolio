@@ -1,12 +1,7 @@
-# 💻 Dewduni Weerasundara — IT Portfolio
-
-Welcome to my personal portfolio website!  
-This portfolio showcases my skills, projects, experience, and contact details as an Information Technology undergraduate and aspiring Software Developer.
-<div align="center">
 
 # 💻 Dewduni Weerasundara — IT Portfolio
 
-<img src="assets/portfolio-banner.png" alt="Dewduni Weerasundara Portfolio Banner" width="100%" />
+<img src="C:\Users\ASUS\OneDrive\Desktop\portfolio\assets" alt="Dewduni Weerasundara Portfolio Banner" width="100%" />
 
 <br>
 
