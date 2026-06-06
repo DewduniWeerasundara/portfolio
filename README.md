@@ -1,7 +1,7 @@
 
 # 💻 Dewduni Weerasundara — IT Portfolio
 
-<img src="C:\Users\ASUS\OneDrive\Desktop\portfolio\assets" alt="Dewduni Weerasundara Portfolio Banner" width="100%" />
+<img src="C:\Users\ASUS\OneDrive\Desktop\portfolio\assets" />
 
 <br>
 
